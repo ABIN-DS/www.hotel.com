@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>订房信息（员工）</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/reserve.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/Validform_v5.3.2_min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/reserve.js"></script>
+</head>
+<body>
+<!--head start-->
+<div class=" clearfix head">
+    <div class="wrap">
+        <div class="fl fs30 white mr30">酒店管理系统</div>
+        <ul class="fl white fs16 ml10">
+            <li class="fl p5"><a href="index0.html">首页</a></li>
+            <li class="fl p5"><a href="reserve0.html">酒店预订</a></li>
+            <li class="fl p5"><a class="cur" href="reserve22.html">订房信息</a></li>
+            <li class="fl p5"><a href="management.html">用户管理</a></li>
+            <li class="fl p5"><a href="liuyan1.html">留言板</a></li>
+            <li class="fl p5"><a href="checkOut.html">退房</a></li>
+        </ul>
+        <div class="fl clearfix ml40 ">
+            <a class="pr10 green" href="#">王亚苹</a>|<a class="pl10 white " href="register.html">免费注册</a>
+        </div>
+    </div>
+</div>
+<!--head end-->
+<div class="wrap">
+    <form>
+        <input class="search"  type="text" placeholder="房间号">
+        <input class="submit org" type="submit" value="搜索">
+    </form>
+</div>
+<div class="conBox wrap">
+    <table class="table1" cellpadding="0" cellspacing="1">
+        <thead>
+        <td class="alignM" width="9%">编 号</td>
+        <td class="alignM">类型</td>
+        <td class="alignM" width="8%">面积/平米</td>
+        <td class="alignM" width="8%">价格/元</td>
+        <td class="alignM" width="8%">姓名</td>
+        <td class="alignM" width="8%">电话</td>
+        <td class="alignM" >证件号</td>
+        <td class="alignM" width="8%">入住日期</td>
+        <td class="alignM" width="8%">离开日期</td>
+        <td class="alignM" width="8%">接待人员</td>
+        <td class="alignM" width="8%"><a href="edit.html">编辑</a></td>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="alignM">1</td>
+            <td class="alignM">商务型</td>
+            <td class="alignM">30</td>
+            <td class="alignM">99</td>
+            <td class="alignM ">王亚苹</td>
+            <td class="alignM">15010238227</td>
+            <td class="alignM">130322199302986538</td>
+            <td class="alignM">15/4/3</td>
+            <td class="alignM">15/4/4</td>
+            <td class="alignM">张平</td>
+            <td class="alignM"><a href="edit.html" class="edit">编辑</a>  <a href="###" class="del">退房</a></td>
+        </tr>
+        <tr>
+            <td class="alignM">2</td>
+            <td class="alignM">经济型</td>
+            <td class="alignM">25</td>
+            <td class="alignM">89</td>
+            <td class="alignM">王亚</td>
+            <td class="alignM">15010238228</td>
+            <td class="alignM">130322199302986539</td>
+            <td class="alignM">15/4/3</td>
+            <td class="alignM">15/4/4</td>
+            <td class="alignM">张平</td>
+            <td class="alignM"><a href="edit.html" class="edit">编辑</a>  <a href="###" class="del">退房</a></td>
+        </tr>
+        <tr>
+            <td class="alignM">3</td>
+            <td class="alignM">商务型</td>
+            <td class="alignM">30</td>
+            <td class="alignM">99</td>
+            <td class="alignM">王苹</td>
+            <td class="alignM">15110238227</td>
+            <td class="alignM">130422199302986538</td>
+            <td class="alignM">15/4/3</td>
+            <td class="alignM">15/4/4</td>
+            <td class="alignM">张平</td>
+            <td class="alignM"><a href="edit.html" class="edit">编辑</a>  <a href="###" class="del">退房</a></td>
+        </tr>
+        <tr>
+            <td class="alignM">4</td>
+            <td class="alignM">商务型</td>
+            <td class="alignM">30</td>
+            <td class="alignM">99</td>
+            <td class="alignM">张三</td>
+            <td class="alignM">15010568227</td>
+            <td class="alignM">130322199307686538</td>
+            <td class="alignM">15/4/3</td>
+            <td class="alignM">15/4/4</td>
+            <td class="alignM">张平</td>
+            <td class="alignM"><a href="edit.html" class="edit">编辑</a>  <a href="###" class="del">退房</a></td>
+        </tr>
+        <tr>
+            <td class="alignM">5</td>
+            <td class="alignM">商务型</td>
+            <td class="alignM">30</td>
+            <td class="alignM">99</td>
+            <td class="alignM">张亚苹</td>
+            <td class="alignM">15010558227</td>
+            <td class="alignM">130333199302986538</td>
+            <td class="alignM">15/4/3</td>
+            <td class="alignM">15/4/4</td>
+            <td class="alignM">张平</td>
+            <td class="alignM"><a href="edit.html" class="edit">编辑</a>  <a href="#" class="del">退房</a></td>
+        </tr>
+        </tbody>
+        <!--<tfoot>
+        <td colspan="11">翻页翻页</td>
+        </tfoot>-->
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+.liu{
+    width: 1004px;
+    border: 1px solid #cccccc;
+}
+.liu textarea{
+    text-indent: 1em;
+}
+.liu p{
+    position: relative;
+}
+.con{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+}
+.item{
+    width: 1004px;
+    border: 1px solid #ebe3bc;
+}
+.item p{
+    height: 24px;
+    line-height: 24px;
+    text-indent: 2em;
+}
+.item .red:hover{
+    color: #ff0000;
+}
