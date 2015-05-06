@@ -12,47 +12,35 @@
 </head>
 <body>
 <!--head start-->
-<div class=" clearfix head ">
-    <div class="wrap">
-        <div class="fl fs30 white mr30">酒店管理系统</div>
-        <ul class="fl white fs16 ml10">
-            <li class="fl p5"><a href="index.html">首页</a></li>
-            <li class="fl p5"><a href="reserve.html">酒店预订</a></li>
-            <li class="fl p5"><a href="reserve2.html">订房信息</a></li>
-            <li class="fl p5"><a href="liuyan.html">留言板</a></li>
-            <li class="fl p5"><a href="contact.html">联系我们</a></li>
-        </ul>
-        <div class="fl clearfix ml40 ">
-            <a class="pr10 green" href="#">登录</a>|<a class="pl10 white " href="register.html">免费注册</a>
-        </div>
-    </div>
-</div>
+<?php
+	$this->load->view("layout/header.php");
+?>
 <!--head end-->
     <!--main-->
     <div class="wrapper mainout">
     	<div class="wrap0 clearfix main">
         	<div class="main-register">
-            	<h2><span class="blue">欢迎登录</span>如没有账号，请<a href="register.html">点此注册</a></h2>
-                <form id="form-register" action="#2" method="post">
+            	<h2><span class="blue">欢迎登录</span>如没有账号，请<a href="<?php echo $this->config->site_url();?>register">点此注册</a></h2>
+                <form id="form-register" action="<?php echo $this->config->site_url();?>login/submit_login" method="post">
                     <p><label class="fl">手机号</label>
-                    	<input class="fl" type="text" placeholder="请输入11位手机号" datatype="m" nullmsg="请输入联系人手机号！" errormsg="请输入正确的手机号！" sucmsg="">
+                    	<input class="fl" type="text" placeholder="请输入11位手机号" datatype="m" nullmsg="请输入联系人手机号！" errormsg="请输入正确的手机号！" sucmsg="" name="telephone">
                     	<span class="Validform_checktip error"></span>
                     </p>
-                    <p><label class="fl">邮箱</label>
+                    <!--<p><label class="fl">邮箱</label>
                     	<input class="fl" type="text" placeholder="请输入您的邮箱" datatype="e" nullmsg="请输入您的邮箱！" errormsg="请输入正确的邮箱格式！" sucmsg="">
                     	<span class="Validform_checktip error"></span>
-                    </p>
+                    </p>-->
                     <p><label class="fl">密码</label>
-                    	<input class="fl" type="password" placeholder="请输入6-16位的密码" name="userpassword" nullmsg="请再次输入密码！" datatype="*6-16" errormsg="请输入6~16位的字母、数字！" sucmsg="">
+                    	<input class="fl" type="password" placeholder="请输入6-16位的密码" name="password" nullmsg="请再次输入密码！" datatype="*6-16" errormsg="请输入6~16位的字母、数字！" sucmsg="">
                     	<span class="Validform_checktip error"></span>
                     </p>
-                    <p><label class="fl">重复密码</label>
+                    <!--<p><label class="fl">重复密码</label>
                     	<input class="fl" type="password" placeholder="请再次输入密码" recheck="userpassword" datatype="*"
                          name="userpassword2" nullmsg="请再次输入密码" sucmsg="">
                     	<span class="Validform_checktip error"></span>
-                    </p>
+                    </p>-->
                     <p>
-                    	<input class="btn-register" type="button" value="登 录">
+                    	<input class="btn-register" type="submit" value="登 录">
                     </p>
                 </form>
             </div>

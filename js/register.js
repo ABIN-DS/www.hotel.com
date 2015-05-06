@@ -11,6 +11,6 @@ $(function(){
 			"zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
 			"tel":/^(\\d{3,4}-)\\d{7,8}$/
 		},
-		ajaxPost:true
+		ajaxPost:false
 	});
 	});

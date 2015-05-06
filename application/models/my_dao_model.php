@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class dao_common_model extends CI_Model
+class my_dao_model extends CI_Model
 {
 	function __construct()
 	{
@@ -14,6 +14,8 @@ class dao_common_model extends CI_Model
 		//参数提取和设置
 		if(isset($data["select"]))
 			$this->db->select($data["select"]);
+		else 
+			$this->db->select('*');
 		//condition_part部分的处理		
 		if(!isset($data["condition"]))
 			$data["condition"] = array();
@@ -73,7 +75,7 @@ class dao_common_model extends CI_Model
 			}
 			$this->db->where($key, $val);
 		}
-		return $this->db->update($data["data"], $tableName);
+		return $this->db->update($tableName, $data["data"]);
 	}
 	
 	/*
@@ -108,7 +110,7 @@ class dao_common_model extends CI_Model
 				return FALSE;
 			}			
 		}
-		return $this->db->insert($data, $tableName);
+		return $this->db->insert( $tableName, $data);
 	}
 	
 	/*

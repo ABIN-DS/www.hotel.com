@@ -5,7 +5,7 @@ CREATE TABLE `user`(
 	`telephone` varchar(20) not null default '123456789',	-- 用户的电话，登陆的账户
 	`email` varchar(100) not null default '',	-- 用户的邮箱地址，也可作为登陆
 	`password` varchar(100) not null default 'e10adc3949ba59abbe56e057f20f883e', -- 默认是‘123456’的md5值
-	`role` enum('admin', 'receive','normal') default 'normal', 	-- 用户角色，管理员或普通注册用户，默认是普通用户
+	`role` enum('admin', 'receive', 'normal') default 'normal', 	-- 用户角色，管理员或普通注册用户，默认是普通用户
 	`is_allow_login` enum('yes', 'no') default 'yes', 	-- 默认允许登陆	 
 	`last_login_time` varchar(20)	-- 记录了本条记录的更新时间，UNIX时间戳
 );
@@ -48,6 +48,6 @@ CREATE TABLE `news_list`(
 	`id` int primary key auto_increment, 	-- 主键标示
 	`user_admin_id` int not null default 1, 	-- 添加新闻内容的管理员Id
 	`title` varchar(200) not null default '无题', 	-- 新闻的标题
-	`content` text not null default '', 	 -- 新闻内容
+	`content` text not null, 	 -- 新闻内容
 	`create_time` varchar(20) 	-- 记录的更新时间
 );
