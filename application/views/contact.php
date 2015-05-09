@@ -3,33 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>联系我们（员 ）</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <link rel="stylesheet" type="text/css" href="css/reserve.css">
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/Validform_v5.3.2_min.js"></script>
-    <script src="js/register.js"></script>
-    <script src="js/reserve.js"></script>
+    <?php
+    	$this->load->view("layout/source_base"); 
+    ?>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
 </head>
 <body>
 <!--head start-->
-    <div class=" clearfix head">
-        <div class="wrap">
-            <div class="fl fs30 white mr30">酒店管理系统</div>
-            <ul class="fl white fs16 ml10">
-                <li class="fl p5"><a href="index.html">首页</a></li>
-                <li class="fl p5"><a href="reserve.html">酒店预订</a></li>
-                <li class="fl p5"><a href="reserve22.html">订房信息</a></li>
-                <li class="fl p5"><a href="liuyan1.html">留言板</a></li>
-                <li class="fl p5"><a class="cur" href="#">联系我们</a></li>
-            </ul>
-            <div class="fl clearfix ml40 ">
-                <a class="pr10 green" href="login.html">登录</a>|<a class="pl10 white " href="register.html">免费注册</a>
-            </div>
-        </div>
-    </div>
+<?php
+	$this->load->view("layout/header"); 
+?>
 <!--head end-->
 <div class="mt15 wrap">
     <div class="fl reserve">

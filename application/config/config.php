@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.hotel.com/';
+$config['base_url']	= 'http://www.hotel.com';
 
 /*
 |--------------------------------------------------------------------------

@@ -15,6 +15,37 @@ function decrypt_password($ciphertext)
 	
 }
 
+/*
+ * 获取房型名称
+ */
+function get_room_category_name($category)
+{
+	$category_names = array(
+			"all"		=>	"所  有",
+			"business"	=>	"商务型",
+			"meeting"	=>	"会议型",
+			"cheap"		=>	"经济型",
+			"shortcut"	=>	"便捷型"
+	);
+	return $category_names[$category];
+}
+
+/*
+ * 获取房型
+*/
+function get_room_categorys()
+{
+	$category_names = array(
+			"all",
+			"business",
+			"meeting",
+			"cheap",
+			"shortcut"
+	);
+	return $category_names;
+}
+
+
 /**
  * @param string
  * @param Boolen

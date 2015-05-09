@@ -3,12 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>注册</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/Validform_v5.3.2_min.js"></script>
-    <script src="js/register.js"></script>
+    <?php
+		$this->load->view("layout/source_base"); 
+	?>
 </head>
 <body>
 <!--head start-->

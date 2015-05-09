@@ -3,36 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>酒店管理系统</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/Validform_v5.3.2_min.js"></script>
-    <script src="js/register.js"></script>
+    <?php
+		$this->load->view("layout/source_base"); 
+	?>
+    <script src="/js/home.js"></script>
 </head>
 <body>
 <!--head start-->
-    <div class=" clearfix head ">
-        <div class="wrap">
-            <div class="fl fs30 white mr30">酒店管理系统</div>
-            <ul class="fl white fs16 ml10">
-                <li class="fl p5"><a class="cur" href="#">首页</a></li>
-                <li class="fl p5"><a href="reserve.html">酒店预订</a></li>
-                <li class="fl p5"><a href="reserve2.html">订房信息</a></li>
-                <li class="fl p5"><a href="liuyan.html">留言板</a></li>
-                <li class="fl p5"><a href="contact.html">联系我们</a></li>
-                <li class="fl p5"><a href="index0.html">员工入口</a></li>
-            </ul>
-            <div class="fl clearfix ml40 ">
-                <a class="pr10 green" href="login.html">登录</a>|<a class="pl10 white " href="register.html">免费注册</a>
-            </div>
-        </div>
-
-    </div>
+	<?php 
+		$this->load->view("layout/header");
+	?>
 <!--head end-->
 <!--banner start-->
     <div class="banner  center ">
-        <a href="#"><img src="images/banner1.jpg"></a>
+        <a href="<?php echo $this->config->site_url();?>home"><img src="images/banner1.jpg"></a>
     </div>
 <!--banner end-->
 <!--main start-->
@@ -40,17 +24,17 @@
         <div class="clearfix ">
             <div class="fl select mt20">
                 <h2 class="fs20 pl15 pt15 pb10">酒店预订</h2>
-                <form class="clearfix">
+                <form class="clearfix" id="fm_date" action="home" method="post">
                     <div class="ml20 blue fl">
                         <label class="mr10">入住日期</label>
-                        <input type="date" name="user_date" />
+                        <input type="date" name="date_start" />
                     </div>
                     <div class="ml40 blue fl">
                         <label class="mr10">离店日期</label>
-                        <input type="date" name="user_date" />
+                        <input type="date" name="date_end" />
                     </div>
                 </form>
-                <a href="reserve.html" class="sou center fs16 fr mr30 mt20">搜索</a>
+                <a href="" id="a_search" class="sou center fs16 fr mr30 mt20">搜索</a>
             </div>
             <div class="fr">
                 <div class="mt20 price">
@@ -76,18 +60,21 @@
                         的拉大打开的内裤女生的卡了卡刷卡空间啊连接的鞍山的拉大打开的
                         垃圾啦的开始觉得蓝色垃圾啦的内裤女生的卡了卡刷卡空间啊连接的鞍
                         山的拉大打开的垃圾啦的开始觉得蓝色开始觉得蓝色的阿卡卡是的是的
-                        <a class="blue ml10" href="#">查看更多</a></p>
+                        <a class="blue ml10" href="home/about_us">查看更多</a></p>
                 </div>
             </div>
         </div>
         <div class="fr management">
             <h2>酒店管理知识</h2>
             <ul>
-                <li class="clearfix"><a class="fl" href="#">做好酒店员工激励手段创新</a><span class="fr">2015-04-13</span></li>
-                <li class="clearfix"><a class="fl" href="#">做好酒店员工激励手段创新</a><span class="fr">2015-04-13</span></li>
-                <li class="clearfix"><a class="fl" href="#">做好酒店员工激励手段创新</a><span class="fr">2015-04-13</span></li>
-                <li class="clearfix"><a class="fl" href="#">做好酒店员工激励手段创新</a><span class="fr">2015-04-13</span></li>
-                <li class="clearfix "><a class="fl" href="#">做好酒店员工激励手段创新</a><span class="fr">2015-04-13</span></li>
+            <?php
+            	foreach($news_list as $val)
+            	{ 
+            ?>
+                <li class="clearfix"><a class="fl" href="home/news_detail?news_id=<?php echo $val["id"];?>"><?php echo $val["title"];?></a><span class="fr"><?php echo date("Y-m-d", $val["create_time"]);?></span></li>
+             <?php
+            	} 
+             ?>
             </ul>
         </div>
     </div>

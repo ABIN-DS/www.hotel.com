@@ -9,8 +9,8 @@ class my_dao_model extends CI_Model
 	/*
 	 * 每个SQL语句都被分为：select_part,from_part,where_part,limit_part,order_part
 	 */
-	function my_get($tableName, $data)
-	{	
+	function my_get($tableName, $data=array())
+	{
 		//参数提取和设置
 		if(isset($data["select"]))
 			$this->db->select($data["select"]);
@@ -24,7 +24,7 @@ class my_dao_model extends CI_Model
 			if(!$this->db->field_exists($key, $tableName))
 			{
 				$this->addError("query", "field[".$key."] not exists!");
-				return FALSE;
+				return array();
 			}
 			$this->db->where($key, $val);
 		}
@@ -36,7 +36,7 @@ class my_dao_model extends CI_Model
 			if(!$this->db->field_exists($field, $tableName))
 			{
 				$this->addError("query", "field[".$field."] not exists!");
-				return FALSE;
+				return array();
 			}
 			$this->db->order_by($field, $order);
 		}
@@ -52,7 +52,7 @@ class my_dao_model extends CI_Model
 	 * 更新数据库
 	 * $data->"data","condition"
 	 */
-	function my_update($tableName, $data)
+	function my_update($tableName, $data=array())
 	{
 		//检查更新的字段是否存在
 		foreach ($data["data"] as $key=>$val)
@@ -82,7 +82,7 @@ class my_dao_model extends CI_Model
 	 * 删除记录
 	 * $data->"condition"
 	 */
-	function my_delete($tableName, $condition)
+	function my_delete($tableName, $condition=array())
 	{
 		foreach($condition as $key=>$val)
 		{
@@ -124,10 +124,10 @@ class my_dao_model extends CI_Model
 	/*
 	 * 获取最近一次执行的SQL语句
 	 */
-	function getLastSQL()
+	function get_last_sql()
 	{
 		return $this->db->last_query()." : ".$this->db->insert_string().
-				" : ".$this->update_string();
+				" : ".$this->db->update_string();
 	}
 	
 	/*
